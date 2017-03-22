@@ -4,7 +4,7 @@ Backbone.sync = function(method, model, options) {
     if (model instanceof Backbone.Collection) {
         console.warn("Collection sync: " + method);
     } else {
-        console.warn("model sync: " + method);
+        console.warn("model sync: " + method); 
     }
 
     model.trigger("change");

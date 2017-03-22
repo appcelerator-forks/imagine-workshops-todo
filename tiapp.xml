@@ -1,74 +1,99 @@
-<?xml version="1.0" encoding="UTF-8"?><ti:app xmlns:ti="http://ti.appcelerator.org">
-	<id>com.bouncingfish.todo</id>
-	<name>todo</name>
-	<version>1.0</version>
-	<publisher>not specified</publisher>
-	<url>http://www.bouncingfish.com</url>
-	<description/>
-	<copyright>not specified</copyright>
-	<icon>appicon.png</icon>
-	<fullscreen>false</fullscreen>
-	<navbar-hidden>false</navbar-hidden>
-	<analytics>true</analytics>
-	<guid>67fd3853-edea-4da3-a709-ccb9f38da28c</guid>
-	<property name="ti.ui.defaultunit" type="string">dp</property>
-	<property name="run-on-main-thread" type="bool">true</property>
-	<ios>
-		<enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
-		<use-app-thinning>true</use-app-thinning>
-		<plist>
-			<dict>
-				<key>UISupportedInterfaceOrientations~iphone</key>
-				<array>
-					<string>UIInterfaceOrientationPortrait</string>
-				</array>
-				<key>UISupportedInterfaceOrientations~ipad</key>
-				<array>
-					<string>UIInterfaceOrientationPortrait</string>
-					<string>UIInterfaceOrientationPortraitUpsideDown</string>
-					<string>UIInterfaceOrientationLandscapeLeft</string>
-					<string>UIInterfaceOrientationLandscapeRight</string>
-				</array>
-				<key>UIRequiresPersistentWiFi</key>
-				<false/>
-				<key>UIPrerenderedIcon</key>
-				<false/>
-				<key>UIStatusBarHidden</key>
-				<false/>
-				<key>UIStatusBarStyle</key>
-				<string>UIStatusBarStyleDefault</string>
-			</dict>
-		</plist>
-	</ios>
-	<android xmlns:android="http://schemas.android.com/apk/res/android">
-        <manifest>
-            <!--<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />-->
-            <!-- Replace StyleName with the name of your style -->
-            <application android:theme="@style/todo"/>
-
-
-        </manifest>
-        <!-- the services tag must be added so that our service will run -->
-
-    </android><mobileweb>
-		<precache>
-		</precache>
-		<splash>
-			<enabled>true</enabled>
-			<inline-css-images>true</inline-css-images>
-		</splash>
-		<theme>default</theme>
-	</mobileweb>
-	<modules>
-	</modules>
-	<deployment-targets>
-		<target device="android">true</target>
-		<target device="ipad">true</target>
-		<target device="iphone">true</target>
-		<target device="mobileweb">false</target>
-		<target device="windows">false</target>
-	</deployment-targets>
-	<sdk-version>6.0.2.GA</sdk-version>
-<plugins><plugin version="1.0">ti.alloy</plugin>
-</plugins>
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <id>com.bouncingfish.todo</id>
+  <name>todo</name>
+  <version>1.0</version>
+  <publisher>not specified</publisher>
+  <url>http://www.bouncingfish.com</url>
+  <description>not specified</description>
+  <copyright>not specified</copyright>
+  <icon>appicon.png</icon>
+  <fullscreen>false</fullscreen>
+  <navbar-hidden>false</navbar-hidden>
+  <analytics>true</analytics>
+  <guid>020a7a7a-b0f5-4641-9ddd-5916b0f9a618</guid>
+  <property name="ti.ui.defaultunit" type="string">dp</property>
+  <property name="run-on-main-thread" type="bool">true</property>
+  <ios>
+    <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+    <use-app-thinning>true</use-app-thinning>
+    <plist>
+      <dict>
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+          <string>UIInterfaceOrientationLandscapeLeft</string>
+          <string>UIInterfaceOrientationLandscapeRight</string>
+        </array>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>UIStatusBarStyle</key>
+        <string>UIStatusBarStyleDefault</string>
+      </dict>
+    </plist>
+  </ios>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest>
+      <!--<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />-->
+      <!-- Replace StyleName with the name of your style -->
+      <application android:theme="@style/todo"/>
+    </manifest>
+    <!-- the services tag must be added so that our service will run -->
+  </android>
+  <mobileweb>
+    <precache/>
+    <splash>
+      <enabled>true</enabled>
+      <inline-css-images>true</inline-css-images>
+    </splash>
+    <theme>default</theme>
+  </mobileweb>
+  <modules>
+    <module platform="android">hyperloop</module>
+    <module platform="iphone">hyperloop</module>
+    <module platform="commonjs">ti.cloud</module>
+    <module platform="android">com.appcelerator.apm</module>
+    <module platform="iphone">com.appcelerator.apm</module>
+  </modules>
+  <deployment-targets>
+    <target device="android">true</target>
+    <target device="ipad">true</target>
+    <target device="iphone">true</target>
+    <target device="mobileweb">false</target>
+    <target device="windows">false</target>
+  </deployment-targets>
+  <sdk-version>6.0.2.GA</sdk-version>
+  <plugins>
+    <plugin version="1.0">ti.alloy</plugin>
+    <plugin>hyperloop</plugin>
+  </plugins>
+  <property name="appc-app-id" type="string">58d1c7c41d4f909c4dcd1353</property>
+  <property name="acs-authbase-url-development" type="string">https://secure-identity.cloud.appcelerator.com</property>
+  <property name="acs-base-url-development" type="string">https://api.cloud.appcelerator.com</property>
+  <property name="acs-oauth-secret-development" type="string">q0XgjZHYBti0aMDuAhL9bTFVAv6qlsEU</property>
+  <property name="acs-oauth-key-development" type="string">Jt9XLkcHiHvCrYlTwCJCGIjecyDmwnqV</property>
+  <property name="acs-api-key-development" type="string">ckBeYNypxpRky9ykYqDEFHR0RTRJwQEa</property>
+  <property name="acs-username-development" type="string">appc_app_user_dev</property>
+  <property name="acs-password-development" type="string">PiA1xJZt6kpxxLeBPM</property>
+  <property name="acs-authbase-url-production" type="string">https://secure-identity.cloud.appcelerator.com</property>
+  <property name="acs-base-url-production" type="string">https://api.cloud.appcelerator.com</property>
+  <property name="acs-oauth-secret-production" type="string">RBhfqzcjFhH0A3mNP84lIHxp26V50k2a</property>
+  <property name="acs-oauth-key-production" type="string">SHb6RMgqo7j84Dq4wEzuxcHKUovzQQ3f</property>
+  <property name="acs-api-key-production" type="string">TgNU5PXLEj6Pk9gkEk3HbxbxOGthIGYa</property>
+  <property name="acs-username-production" type="string">appc_app_user</property>
+  <property name="acs-password-production" type="string">nolbU7PdpEYYYnQIzn</property>
+  <property name="appc-org-id" type="string">68608915200456</property>
+  <property name="appc-creator-user-id" type="string">73869121-897c-4725-a76a-f95c53b0837d</property>
+  <property name="com-appcelerator-apm-id" type="string">3771decf10594458ad07c7560df21dd900555300</property>
 </ti:app>

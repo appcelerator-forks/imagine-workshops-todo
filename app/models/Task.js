@@ -1,10 +1,8 @@
 exports.definition = {
     config: {
         URL: 'http://localhost:8080/api/task',
-        //debug: true,
         headers: {
             "Authorization": 'Basic RnppQkMrZEduU0tkbzNjQ1o4RVhycVc4VGV5eWwzcEM6',
-            //"Content-Type": 'application/json'
         },
 
         adapter: {
@@ -12,7 +10,7 @@ exports.definition = {
             collection_name: 'task',
             idAttribute: "id"
         },
-        parentNode: function(data) {            
+        parentNode: function(data) {
             data = data || [];
             return data.tasks || data;
         }
@@ -25,5 +23,4 @@ exports.definition = {
         _.extend(Collection.prototype, {});
         return Collection;
     }
-
 };

@@ -1,10 +1,14 @@
+
+// Gets the tasks form arrow
 Alloy.Collections.tasks.fetch();
+
 /**
  *
  * @param {Object} e
  */
 function handleRowClick(e) {
 
+    // This gets the row you clicked (index) and saves it to the collection
     Alloy.Collections.tasks.at(e.index).save({
         completed : !Alloy.Collections.tasks.at(e.index).get("completed")
     });
@@ -15,7 +19,7 @@ function handleRowClick(e) {
  */
 function handleAdd() {
     if ($.taskName.value) {
-
+        
         var model = Alloy.createModel("tasks");
 
         model.save({

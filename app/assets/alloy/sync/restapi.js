@@ -36,7 +36,7 @@ function apiCall(_options, _callback) {
 			if (this.status != 304 && this.status != 204) {
 				// parse JSON
 				try {
-					console.log(this.status)
+					console.log(this.status);
 					if (this.responseText) responseJSON = JSON.parse(this.responseText);
 				} catch (e) {
 					Ti.API.error('[REST API] apiCall PARSE ERROR: ' + e.message);

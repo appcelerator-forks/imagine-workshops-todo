@@ -10,7 +10,7 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 
-Alloy.Globals.mock = require("mock");
+/*Alloy.Globals.mock = require("mock");
 
 Alloy.Globals.mock.createCollection("tasks", [{
     description: "Do some stuff",
@@ -18,7 +18,7 @@ Alloy.Globals.mock.createCollection("tasks", [{
 }, {
     description: "Shopping",
     completed: true
-}]);
+}]);*/
 
 // showing local storage
 //Alloy.Collections.tasks.on("change", function() {

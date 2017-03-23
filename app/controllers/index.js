@@ -1,22 +1,25 @@
 Alloy.Collections.task.fetch();
 
 function handleRowClick(e) {
-    Alloy.Collections.task.at(e.index).set("completed", !Alloy.Collections.task.at(e.index).get("completed"));
-    //alert(Alloy.Collections.task.at(e.index).id)
-    Alloy.Collections.task.at(e.index).save();
+    //Alloy.Collections.task.at(e.index).destroy();
+    Alloy.Collections.task.at(e.index).save({
+        completed: !Alloy.Collections.task.at(e.index).get("completed")
+    });
 }
 
 function handleAdd() {
     if ($.taskName.value) {
 
-        var model = Alloy.createModel("task", {
-            description: $.taskName.value,
-            completed: false
+        var model = Alloy.createModel("task");
+
+        model.save({
+            "description": $.taskName.value,
+            "completed": false
+        }, {
+            success: function() {
+                Alloy.Collections.task.add(model);
+            }
         });
-
-        model.save();
-
-        //Alloy.Collections.task.add(model);
 
         $.taskName.value = "";
 

@@ -1,5 +1,6 @@
 <Alloy>
     <Collection src="tasks"/>
+    <!--Model src="tasks"/-->
     <NavigationWindow module="ui">
         <Window class="container" title="task">
             <View class="wrapper">

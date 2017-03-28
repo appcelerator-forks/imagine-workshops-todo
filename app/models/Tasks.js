@@ -2,7 +2,8 @@ exports.definition = {
     config: {
         URL: 'http://localhost:8080/api/task',
         headers: {
-            "Authorization": 'Basic ' + Ti.Utils.base64encode('XDmpvsUXmiFvrHUxDC0o6aEUNbMo7U+0:'),
+            "Authorization": 'Basic ' + 
+            Ti.Utils.base64encode('O62x7AE39M90NKZQDwNE1BfKkU2bf59R:'),
         },
 
         adapter: {
@@ -24,3 +25,4 @@ exports.definition = {
         return Collection;
     }
 };
+

@@ -1,5 +1,4 @@
-
-// Gets the tasks form arrow
+// Gets the tasks form arrow built in backbone function
 Alloy.Collections.tasks.fetch();
 
 /**
@@ -20,7 +19,9 @@ function handleRowClick(e) {
 function handleAdd() {
     if ($.taskName.value) {
         
-        var model = Alloy.createModel("tasks");
+        var model = Alloy.createModel("tasks");        
+        //could also add this in the XML as <Model src="tasks"/> to create instance
+        // then you would accessess it like var model = Alloy.Models.tasks;
 
         model.save({
             "description" : $.taskName.value,

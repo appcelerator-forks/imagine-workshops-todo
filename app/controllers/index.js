@@ -7,7 +7,7 @@ Alloy.Collections.tasks.fetch();
  */
 function handleRowClick(e) {
 
-    // This gets the row you clicked (index) and saves it to the collection
+    // This gets the row you clicked (index) and saves it to the collection triggers a change event calls backbone sync to cloud for update
     Alloy.Collections.tasks.at(e.index).save({
         completed : !Alloy.Collections.tasks.at(e.index).get("completed")
     });
@@ -23,6 +23,7 @@ function handleAdd() {
         //could also add this in the XML as <Model src="tasks"/> to create instance
         // then you would accessess it like var model = Alloy.Models.tasks;
 
+		// saves it to the collection triggers a change event calls backbone sync to cloud for create
         model.save({
             "description" : $.taskName.value,
             "completed" : false

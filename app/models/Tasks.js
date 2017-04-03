@@ -1,16 +1,17 @@
 exports.definition = {
     config: {
-        URL: 'http://localhost:8080/api/task',
+        URL: 'http://localhost:8080/api/tasks',
         headers: {
             "Authorization": 'Basic ' + 
-            Ti.Utils.base64encode('O62x7AE39M90NKZQDwNE1BfKkU2bf59R:'),
+            Ti.Utils.base64encode('eBwoRxAQSNcsKijckNjURIijFJTzWPG6:'),
         },
-
+		
         adapter: {
             type: 'restapi',
             collection_name: 'tasks',
             idAttribute: "id"
         },
+        // Gets the parent node of our Array
         parentNode: function(data) {
             data = data || [];
             return data.tasks || data;

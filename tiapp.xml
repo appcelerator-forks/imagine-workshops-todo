@@ -38,6 +38,10 @@
                 <false/>
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleDefault</string>
+                <key>NSSpeechRecognitionUsageDescription</key>
+				<string>Would you please allow us to parse your spoken words?</string>
+				<key>NSMicrophoneUsageDescription</key>
+				<string>Would you please allow the use of your microphone for real-time speech recognition?</string>
             </dict>
         </plist>
     </ios>

@@ -1,3 +1,11 @@
+/* 
+ * In Alloy, models inherit from the Backbone.Model class. 
+ * They contain the interactive data and logic used to control and access it. 
+ * Models are specified with JavaScript files, which provide a table schema, 
+ * adapter configuration and logic to extend the Backbone.Model class. 
+ * Models are automatically defined and available in the controller 
+ * scope as the name of the JavaScript file.
+ */
 exports.definition = {
     config: {
         URL: 'http://localhost:8080/api/tasks',

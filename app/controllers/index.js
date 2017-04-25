@@ -5,7 +5,6 @@ var TiSpeech = require('ti.speech');
 
 
 TiSpeech.initialize();
-TiHaptic.initialize();
 
 var canRecordAudio = false;
 var canUseSpeechRecognition = false;

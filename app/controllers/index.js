@@ -2,7 +2,6 @@ Alloy.Collections.tasks.fetch();
 
 // IMPORT YOUR HYPERLOOP MODULE
 var TiSpeech = require('ti.speech');
-var TiHaptic = require('ti.haptic');
 
 
 TiSpeech.initialize();
@@ -60,7 +59,6 @@ animation.addEventListener('complete',function(){
 var speechText;
 
 function handleMicButtonTouchStart(e) {
-	TiHaptic.impactFeedback();
 	console.info("Mic Button Touch Start");
 	stopAnimation = false;
 	$.micButton.animate(animation);
